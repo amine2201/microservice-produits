@@ -1,8 +1,8 @@
 package com.jaoui.microserviceproduits.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
 public class Product {
@@ -14,6 +14,14 @@ public class Product {
     private String image;
     private Double prix;
     public Product() {
+    }
+
+    public Product( String titre, String description, String image, Double prix) {
+        this.id = id;
+        this.titre = titre;
+        this.description = description;
+        this.image = image;
+        this.prix = prix;
     }
     public Product(int id, String titre, String description, String image, Double prix) {
         this.id = id;
